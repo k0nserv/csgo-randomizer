@@ -1,0 +1,19 @@
+@mixin _text_factory($font-size, $font-weight: false) {
+  font-size: $font-size;
+
+  @if ($font-weight) {
+    font-weight: $font-weight;
+  }
+}
+
+@mixin text_xl($font-weight: false) {
+  @include _text_factory(1.75rem, $font-weight);
+}
+
+@mixin text_lg($font-weight: false) {
+  @include _text_factory(1.625rem, $font-weight);
+}
+
+@mixin text_base($font-weight: false) {
+  @include _text_factory(1.125rem, $font-weight);
+}
